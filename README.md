@@ -1,109 +1,51 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# ML Simulations
 
-# C extensions
-*.so
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Setting Up the Virtual Environment](#setting-up-the-virtual-environment)
+  - [Installing Dependencies](#installing-dependencies)
+- [Usage](#usage)
+  - [Running Simulations](#running-simulations)
+  - [Launching the Dashboard](#launching-the-dashboard)
+- [Project Structure](#project-structure)
+  - [Description of Key Files](#description-of-key-files)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+- [Additional Tips](#additional-tips)
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+## Overview
+**ML Simulations** is a collection of machine learning simulation scripts designed to demonstrate various regression models in real-time. Each simulation evaluates model performance, detects anomalies, and visualizes results through dynamic plots. Additionally, a Streamlit dashboard provides an interactive interface to monitor and analyze simulation metrics.
 
-# Virtual environments
-venv/
-ENV/
-env/
-.env/
-.venv/
+## Features
+- **Diverse Regression Models**: Includes Linear Regression, Decision Tree, Random Forest, Support Vector Regressor (SVR), K-Nearest Neighbors (KNN), Neural Networks, Bayesian Ridge, Ridge, Lasso, and Gradient Boosting.
+- **Real-Time Visualization**: Dynamic matplotlib plots display model predictions, residuals, Mean Squared Error (MSE) over iterations, and rolling window data points.
+- **Anomaly Detection**: Identifies and logs anomalies based on deviations in target values.
+- **Comprehensive Dashboard**: Streamlit-based dashboard for monitoring metrics, visualizing performance, and accessing simulation logs.
+- **Modular Design**: Easily extendable to include more models or simulation scenarios.
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+## Technologies Used
+- **Programming Language**: Python 3.8+
+- **Libraries**:
+  - NumPy - Numerical computations
+  - Matplotlib - Data visualization
+  - Scikit-Learn - Machine learning models
+  - Streamlit - Interactive dashboards
+  - Pandas - Data manipulation
+- **Version Control**: Git & GitHub
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+## Installation
+Follow these steps to set up and run the project on your local machine.
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+### Prerequisites
+- **Python 3.8+**: Ensure Python is installed. [Download here](https://www.python.org/downloads/).
+- **Git**: Install Git from [git-scm.com](https://git-scm.com/).
+- **GitHub Account**: For pushing to repositories.
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# dotenv
-.env
-
-# virtualenv
-venv/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
+### Setting Up the Virtual Environment
+It is recommended to use a virtual environment to manage dependencies.
