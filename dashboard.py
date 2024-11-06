@@ -23,7 +23,7 @@ def load_logs(sim_id):
 def main():
     st.title("Real-Time Simulation Dashboard")
 
-    simulation_id = st.sidebar.selectbox("Select Simulation ID", list(range(1, 11)))
+    simulation_id = st.sidebar.selectbox("Select Simulation ID", list(range(1, 13)))
 
     metrics = load_metrics(simulation_id)
     if metrics:

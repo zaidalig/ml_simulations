@@ -31,7 +31,9 @@ def main():
         'bayesian_regression_simulation.py',
         'ridge_regression_simulation.py',
         'lasso_regression_simulation.py',
-        'gradient_boosting_simulation.py'
+        'gradient_boosting_simulation.py',
+        "elastic_net_simulation.py",  
+        "polynomial_regression_simulation.py"  
     ]
 
     # Verify all scripts exist
