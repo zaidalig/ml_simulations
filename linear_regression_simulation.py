@@ -1,16 +1,19 @@
-# linear_regression_simulation.py
-
 from simulation_module import BaseSimulation
 from sklearn.linear_model import LinearRegression
-import numpy as np  # Added import statement
+import numpy as np
+
 
 class LinearRegressionSimulation(BaseSimulation):
+
     def initialize_dataset(self):
         """
-        Initializes a linear dataset.
+        Initializes a linear dataset either from CSV or generates synthetic data.
         """
-        self.X = np.random.rand(self.initial_points, 1) * 10
-        self.y = self.generate_target(self.X)
+        if self.csv_path and self.feature_columns and self.target_column:
+            super().initialize_dataset()
+        else:
+            self.X = np.random.rand(self.initial_points, 1) * 10
+            self.y = self.generate_target(self.X)
 
     def generate_target(self, X):
         """
@@ -26,6 +29,7 @@ class LinearRegressionSimulation(BaseSimulation):
             'linear': LinearRegression()
         }
 
+
 def run_linear_regression_simulation():
     sim = LinearRegressionSimulation(
         simulation_id=1,
@@ -36,6 +40,7 @@ def run_linear_regression_simulation():
         anomaly_threshold_multiplier=2.0
     )
     sim.run()
+
 
 if __name__ == "__main__":
     run_linear_regression_simulation()

@@ -1,16 +1,20 @@
-# random_forest_simulation.py
-
 from simulation_module import BaseSimulation
 from sklearn.ensemble import RandomForestRegressor
-import numpy as np  # Added import statement
+import numpy as np
+
 
 class RandomForestSimulation(BaseSimulation):
+
     def initialize_dataset(self):
         """
-        Initializes a sinusoidal dataset.
+        Initializes a dataset for random forest regression.
+        Uses CSV data if available; otherwise, generates a sinusoidal dataset.
         """
-        self.X = np.linspace(0, 10, self.initial_points).reshape(-1, 1)
-        self.y = self.generate_target(self.X)
+        if self.csv_path and self.feature_columns and self.target_column:
+            super().initialize_dataset()
+        else:
+            self.X = np.linspace(0, 10, self.initial_points).reshape(-1, 1)
+            self.y = self.generate_target(self.X)
 
     def generate_target(self, X):
         """
@@ -26,6 +30,7 @@ class RandomForestSimulation(BaseSimulation):
             'random_forest': RandomForestRegressor(n_estimators=100, max_depth=5, random_state=self.np_seed)
         }
 
+
 def run_random_forest_simulation():
     sim = RandomForestSimulation(
         simulation_id=3,
@@ -36,6 +41,7 @@ def run_random_forest_simulation():
         anomaly_threshold_multiplier=3.0
     )
     sim.run()
+
 
 if __name__ == "__main__":
     run_random_forest_simulation()
